@@ -1,0 +1,202 @@
+/* fonts */
+@font-face {
+	font-family: montserrat r;
+	src: url("..//fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: montserrat l;
+	src: url("..//fonts/Montserrat-ExtraLight.otf") format("opentype");
+}
+
+@font-face {
+	font-family: montserrat m;
+	src: url("..//fonts/Montserrat-Medium.otf") format("opentype");
+}
+
+@font-face {
+	font-family: montserrat b;
+	src: url("..//fonts/Montserrat-SemiBold.otf") format("opentype");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+}
+
+/* ul, li, p, a */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	font-family: montserrat l;
+	color: white; 
+
+	margin-bottom: 10px;
+}
+
+p {
+	margin-bottom: 5px;
+}
+
+a {
+	font-family: montserrat b;
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* input */
+input[type=text], input[type=password], input[type=submit] {
+	color: white;
+
+	width: 60%;
+	height: 45px;
+
+	border: 0;
+	border-radius: 4px;
+}
+input[type=text] {
+	background-color: #18191c;
+	padding-left: 12px;
+}
+
+input[type=password] {
+	background-color: #18191c;	
+	padding-left: 12px;
+}
+
+input[type=submit] {
+	font-family: montserrat r;
+	background-color: #e50913;
+
+	width: 62%;
+}
+
+/* body */
+#container {
+	display: table;
+}
+
+.column {
+	float: left;
+	height: 100%;
+}
+
+/* column left */
+.left {
+	background-color: #1d1e22;
+	width: 45%;
+	
+	position: absolute;
+	left: 0;
+}
+
+/* column left form */
+#mid {
+	position: relative;
+
+	top: 17%;
+	bottom: 0;
+	left: 18%;
+	right: 0;
+	margin: auto;
+}
+
+#mid img {
+	margin-left: 11%;
+}
+
+#mid .pass {
+	position: relative;
+}
+
+#mid span {
+	font-size: 12px;
+	color: #f7ba1d;
+}
+
+.small {
+	font-family: montserrat l;
+	font-size: 10px;
+}
+
+/* eye. code from: https://codepen.io/maxpelic/pen/gygLxm*/
+.eye {
+  width: 1.25em;
+  height: 0.75em;
+  position: relative;
+  display: inline-block;
+  --color: currentColor;
+}
+
+.eye div{
+  overflow: hidden;
+  height: 50%;
+  position: relative;
+  margin-bottom: -1px;
+}
+
+.eye div:before{
+  content: '';
+  background: currentColor;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 300%;
+  border-radius: 100%;
+}
+
+.eye div:last-child:before{
+  bottom: 0;
+}
+
+.eye:before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  transform: translate(-100%, -50%);
+  width: 10px;
+  height: 10px;
+  background: var(--color);
+  border: 3px solid var(--background);
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.eye:after{
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -150%;
+  transform: rotate(45deg) scaleX(0);
+  transform-origin:left center;
+  width: 90%;
+  height: 0.1em;
+  background: var(--color);
+  border-top: 0.1em solid var(--background);
+  z-index: 2;
+  transition: transform 0.25s;
+}
+
+.eye.slash:after{
+  transform: rotate(45deg) scaleX(1);
+}
+
+/* column right */
+.right {
+	background-color: #18191c;
+	width: 55%;
+
+	position: absolute;
+	right: 0px;
+}

@@ -1,0 +1,412 @@
+/* fonts */
+@font-face {
+	font-family: montserrat r;
+	src: url("..//fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: montserrat l;
+	src: url("..//fonts/Montserrat-ExtraLight.otf") format("opentype");
+}
+
+@font-face {
+	font-family: montserrat m;
+	src: url("..//fonts/Montserrat-Medium.otf") format("opentype");
+}
+
+@font-face {
+	font-family: montserrat b;
+	src: url("..//fonts/Montserrat-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: bebas neue;
+	src: url("..//fonts/BebasNeue-Regular.otf") format("opentype");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	background: transparent;
+}
+
+body {
+	background-color: #18191c;
+	overflow-x: hidden;
+}
+
+/* ul, li, p, a */
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	font-family: montserrat l;
+	color: white; 
+
+	margin-bottom: 10px;
+}
+
+p {
+	margin-bottom: 5px;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* input */
+input[type=text] {
+	background-color: transparent;
+	font-family: montserrat l;
+	font-size: 15px;
+	color: white;
+	width: 100%;
+
+	margin-top: 15px;
+	border-bottom: 1px solid white;
+}
+
+input[type=submit] {
+	font-family: montserrat r;
+	background-color: #e50913;
+
+	width: 100%;
+	border: 0;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+input[type=submit]:hover {
+	color: white;
+}
+
+/* table, tr, td */
+table {
+	width: 100%;
+}
+
+tr {
+	height: 50%;
+}
+
+td {
+	width: 50%;
+}
+
+/* button to top */
+#up {
+	font-family: bebas neue;
+	font-size: 50px;
+	color: white;
+	background-color: white;
+
+	line-height: 5px;
+	bottom: 20px;
+	right: 30px;
+	
+	display: none;
+	position: fixed;
+	
+	z-index: 10;
+}
+
+/* top */
+#top {
+	width: 100%;
+	height: 60%;
+	
+
+	top: 0;
+	margin-top: -10px;
+	position: relative;
+}
+
+/* top menu */
+#menu {
+	width: 100%;
+	top: 0;
+	z-index: 1;
+}
+
+/* top menu left */
+#menu .left {
+	width: 60%;
+	left: 0;
+
+	text-align: left;
+	margin-left: 15px;
+	position: absolute;
+}
+
+#menu span {
+	font-size: 100%;
+}
+
+#menu span, #menu .right {
+	margin-top: 2%;
+}
+
+/* top menu right */
+#menu .right {
+	width: 40%;
+	right: 0;
+
+	text-align: right;
+	margin-right: 20px;
+	position: absolute;
+}
+
+/* top movie */
+#movie {
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+#movie .header {
+	z-index: -2;
+
+	height: 50%;
+	width: 100%;
+	left: 0;
+	right: 0;
+	opacity: 1;
+	margin: auto;
+}
+
+#movie .info {
+	width: 90%;
+	
+	float: left;
+
+	left: 0;
+	right: 0;
+	top: 65%;
+	margin: auto;
+	position: absolute;
+	z-index: 2;
+}
+
+.info .left {
+	width: 20%;
+
+	left: 0;
+	text-align: left;
+	position: absolute;
+
+	animation: LtoR 0.6s ease-out;
+}
+
+.info .left img {
+	box-shadow: 0px 0px 5px black;
+}
+
+.info .right {
+	width: 80%;
+
+	right: 0;
+	margin-top: 18%;
+	position: absolute;
+
+	animation: BtoT 0.6s ease-out;
+}
+
+.info .title {
+	font-family: bebas neue;
+	font-size: 90px;
+	color: white;
+	width: 70%;
+	margin-left: 25px;
+}
+
+.info .description {
+	font-size: 115%;
+	text-align: right;
+	width: 30%;
+
+	right: 0;
+	margin-top: -9%;
+
+	display: inline-block;
+	position: absolute;
+}
+
+.description .watch {
+	font-size: 12px;
+}
+/* end of top */
+
+/* mid */
+#mid {
+	width: 100%;
+	height: 850px;
+	background-color: #18191c;
+	float: left;
+
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 2;
+}
+
+/* mid left */
+#mid .left {
+	width: 60%;
+
+	left: 5%;
+	margin-top: 15%;
+	position: absolute;
+}
+
+#mid .left p {
+	font-family: montserrat l;
+	color: white;
+}
+
+/* mid menu */
+#menu2 {
+	margin-top: 0px;
+	margin-bottom: 30px;
+}
+
+#menu2 ul {
+	padding-bottom: -5px;
+	border-bottom: 1px solid white;
+}
+
+.btn {
+	position: relative;
+  	display: inline-block;
+}
+
+.bttn {
+	background-color: transparent;
+	color: white;
+	padding-left: 0px;
+	padding-right: 50px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+
+	animation: fade 1s ease-out;
+}
+
+/* mid left movie info */
+#mid .left .info {
+	font-size: 17px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid white;
+}
+
+#mid .left video {
+	box-shadow: 0px 0px 5px black;
+
+	animation: TtoB 0.75s ease-in;
+}
+
+#mid .left .synopsis {
+	font-family: montserrat r;
+	font-size: 20px;
+
+	text-align: justify;
+	text-indent: 50px;
+	line-height: 1.6;
+}
+
+#mid .left ul {
+	font-size: 20px;
+}
+
+#mid .left .b {
+	font-family: montserrat b;
+	font-size: 22px;
+}
+
+/* mid right rent form */
+#mid .right {
+	width: 27%;
+
+	right: 5%;
+	margin-top: 15%;
+	position: absolute;
+}
+
+#mid .right img {
+	margin-top: 15%;
+	z-index: -2;
+}
+
+#mid .right .text {
+	font-family: montserrat l;
+	font-size: 15px;
+	color: white;
+
+	margin: 60px;
+	margin-top: -170%;
+	animation: fade 1s ease-in;
+}
+
+.select {
+	font-family: montserrat l;
+	font-size: 15px;
+	color: white;
+
+	width: 30%;
+}
+
+#price, #total {
+	border: 0;
+	width: 40%;
+	text-align: right;
+
+	margin-top: -1px;
+}
+/* end of mif */
+
+/* footer */
+#footer {
+	width: 100%;
+	height: 100px;
+	bottom: 0;
+	margin-top: 75%;
+	background-color: #1d1e22;
+	text-align: center;
+}
+
+#footer p {
+	font-family: montserrat l;
+	color: white;
+
+	margin-top: -15px;
+}
+
+/* animations */
+@keyframes LtoR { /* for movie poster */
+	from {left: -10%;}
+	to {left: 0;}
+}
+
+@keyframes BtoT { /*for movie main info */
+	from {margin-top: 25%; opacity: 0;}
+	to {margin-top: 18%; opacity: 1;}
+}
+
+@keyframes TtoB { /* for video */
+	from {margin-top: -2%; opacity: 0;}
+	to {margin-top: 0; opacity: 1;}
+}
+
+@keyframes fade {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}

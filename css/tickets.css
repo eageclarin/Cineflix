@@ -1,0 +1,298 @@
+/* fonts */
+@font-face {
+	font-family: montserrat r;
+	src: url("..//fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: montserrat l;
+	src: url("..//fonts/Montserrat-ExtraLight.otf") format("opentype");
+}
+
+@font-face {
+	font-family: montserrat m;
+	src: url("..//fonts/Montserrat-Medium.otf") format("opentype");
+}
+
+@font-face {
+	font-family: montserrat b;
+	src: url("..//fonts/Montserrat-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: bebas neue;
+	src: url("..//fonts/BebasNeue-Regular.otf") format("opentype");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	background: transparent;
+}
+
+body {
+	background-color: #18191c;
+	overflow-x: hidden;
+}
+
+/* ul, li, p, a */
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	font-family: montserrat l;
+	color: white; 
+
+	margin-bottom: 10px;
+}
+
+p {
+	margin-bottom: 5px;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* input */
+input[type=submit] {
+	font-family: montserrat r;
+	background-color: #e50913;
+
+	width: 100%;
+	border: 0;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+input[type=submit]:hover {
+	color: white;
+}
+
+/* iframe, table, tr, td */
+iframe {
+	margin-top: 10px;
+}
+
+table {
+	color: white;
+	text-align: center;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+tr {
+	font-family: montserrat b;
+	animation: fade 1s ease-in;
+}
+
+tr:nth-child(even) {
+	background-color: #1d1e22;
+}
+
+td {
+	font-size: 15px;
+	padding: 15px;
+}
+
+td a img {
+	width: 80%;
+	box-shadow: 0px 0px 4px #e50913;
+}
+
+td a img:hover {
+	box-shadow: 0px 0px 4px white;
+}
+
+/* button to top */
+#up {
+	font-family: bebas neue;
+	font-size: 50px;
+	color: white;
+	background-color: white;
+
+	line-height: 5px;
+	bottom: 20px;
+	right: 30px;
+	
+	display: none;
+	position: fixed;
+	
+	z-index: 10;
+}
+
+/* top */
+#top {
+	width: 100%;
+
+	top: 0;
+	margin-top: -10px;
+	position: relative;
+	background-color: #1d1e22;
+}
+
+/* top menu */
+#menu {
+	width: 100%;
+	top: 0;
+}
+
+/* top menu left */
+#menu .left {
+	width: 60%;
+	left: 0;
+
+	text-align: left;
+	margin-left: 15px;
+	position: absolute;
+}
+
+#menu span, #menu .right {
+	margin-top: 2%;
+}
+
+/* top menu right */
+#menu .right {
+	width: 40%;
+	right: 0;
+
+	text-align: right;
+	margin-right: 20px;
+	position: absolute;
+}
+/* end of top */
+
+/* bottom */
+#bottom {
+	width: 90%;
+
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+/* bottom menu */
+#menu2 {
+	width: 40%;
+	text-align: center;
+
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-top: -50px;
+}
+
+#menu2 ul {
+	padding-bottom: -5px;
+	border-bottom: 1px solid white;
+}
+
+#btn {
+	position: relative;
+  	display: inline-block;
+}
+
+.bttn {
+	font-family: bebas neue;
+	background-color: transparent;
+	color: #e50913;
+
+	padding-left: 60px;
+	padding-right: 60px;
+	font-size: 40px;
+	border: none;
+	cursor: pointer;
+
+	animation: LtoR 0.5s ease-out;
+}
+
+#btn:hover .bttn {
+	text-decoration: none;
+	color: white;
+}
+
+table tr .in {
+	font-size: 17px;
+	padding: 15px;
+}
+
+/* bottom thumbnails */
+#thumbnail {
+	position: relative;
+
+	animation: th ease-in;
+}
+
+#thumbnail .image {
+	border: none;
+	box-shadow: 0px 0px 4px black;
+}
+
+#thumbnail .image:hover {
+	box-shadow: 0px 0px 4px white;
+}
+
+/* payment button */
+.payment {
+	font-family: montserrat r;
+	font-size: 20px;
+	color: white;
+
+	width: 30%;
+	float: right;
+	margin-top: 25px;
+	text-align: right;
+
+	animation: RtoL 0.75s ease-out;
+}
+
+.payment input[type=submit] {
+	width: 25%;
+	margin-top: 15px;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+/* end of bottom */
+
+/* footer */
+#footer {
+	width: 100%;
+	height: 100px;
+	bottom: 0;
+	background-color: #1d1e22;
+	margin-top: 50px;
+	text-align: center;
+}
+
+#footer p {
+	font-family: montserrat l;
+	color: white;
+
+	margin-top: -15px;
+}
+
+/* animations */
+@keyframes RtoL { /* for pay button */
+	from {margin-right: -50px;}
+	to {margin-right: 0;}
+}
+
+@keyframes LtoR { /* for menu2 buttons */
+	from {padding-left: 0px; padding-right: 120px; opacity: 0;}
+	to {padding-left: 60px; padding-left: 60px; opacity: 1;}
+}
+
+@keyframes fade {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}

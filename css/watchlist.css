@@ -1,0 +1,296 @@
+/* fonts */
+@font-face {
+	font-family: montserrat r;
+	src: url("..//fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: montserrat l;
+	src: url("..//fonts/Montserrat-ExtraLight.otf") format("opentype");
+}
+
+@font-face {
+	font-family: montserrat m;
+	src: url("..//fonts/Montserrat-Medium.otf") format("opentype");
+}
+
+@font-face {
+	font-family: montserrat b;
+	src: url("..//fonts/Montserrat-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: bebas neue;
+	src: url("..//fonts/BebasNeue-Regular.otf") format("opentype");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	background: transparent;
+}
+
+body {
+	background-color: #18191c;
+	overflow-x: hidden;
+	overflow: overlay;
+}
+
+/* ul, li, p, a */
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	font-family: montserrat l;
+	color: white; 
+
+	margin-bottom: 10px;
+}
+
+p {
+	margin-bottom: 5px;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* table, tr, td */
+table {
+	width: 100%;
+}
+
+tr {
+	height: 50%;
+}
+
+td {
+	width: 20%;
+	padding: 5px;
+}
+
+/* button to top */
+#up {
+	font-family: bebas neue;
+	font-size: 50px;
+	color: white;
+	background-color: white;
+
+	line-height: 5px;
+	bottom: 20px;
+	right: 30px;
+	
+	display: none;
+	position: fixed;
+	
+	z-index: 10;
+}
+
+/* top */
+#top {
+	width: 100%;
+
+	top: 0;
+	margin-top: -10px;
+	position: relative;
+	background-color: #1d1e22;
+}
+
+/* top menu */
+#menu {
+	width: 100%;
+	top: 0;
+}
+
+/* top menu left */
+#menu .left {
+	width: 60%;
+	left: 0;
+
+	text-align: left;
+	margin-left: 15px;
+	position: absolute;
+}
+
+#menu span, #menu .right {
+	margin-top: 2%;
+}
+
+/* top menu right */
+#menu .right {
+	width: 40%;
+	right: 0;
+
+	text-align: right;
+	margin-right: 30px;
+	position: absolute;
+}
+/* end of top */
+
+/* bottom */
+#bottom {
+	width: 90%;
+	height: 90%;
+
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-top: -150px;
+}
+
+/* bottom menu */
+#menu2 {
+	width: 100%;
+	text-align: center;
+
+	left: 0;
+	right: 0;
+	margin: auto;
+
+	animation: BtoT 0.75s ease-in;
+}
+
+#menu2 ul {
+	padding-bottom: -5px;
+	border-bottom: 1px solid white;
+}
+
+.btn {
+	position: relative;
+  	display: inline-block;
+}
+
+.bttn {
+	font-family: bebas neue;
+	background-color: transparent;
+	color: #e50913;
+
+	padding-left: 60px;
+	padding-right: 60px;
+	font-size: 130px;
+	border: none;
+	cursor: pointer;
+}
+
+/* bottom thumbnails */
+#thumbnail {
+	position: relative;
+	width: 100%;
+
+	animation: th ease-in;
+}
+
+#thumbnail .image {
+	width: 100%;
+	display: block;
+	border: none;
+	box-shadow: 0px 0px 4px black;
+}
+
+#thumbnail .overlay {
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	transition: .5s ease;
+	background-color: black;
+	pointer-events:none;
+	
+}
+
+#thumbnail:hover .overlay {
+	opacity: 0.8;
+}
+
+.overlay input[type=submit] {
+	padding: 10px;
+	text-align: center;
+	font-size: 15px;
+	color: white;
+	margin-top: -1%;
+	margin-right: 1%;
+	float: right;
+}
+
+.overlay .txt {
+	font-family: montserrat m;
+	font-size: 15px;
+	color: white;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.txt .title {
+	font-family: bebas neue;
+	font-size: 45px;
+}
+
+.image:hover {
+	opacity: 1;
+	box-shadow: 0px 0px 4px white;
+}
+
+.image input[type=image], .poster input[type=hidden] {
+	width: 100%;
+	height: auto;
+}
+
+iframe {
+	margin-top: 30px;
+	overflow: hidden;
+}
+/* end of bottom */
+
+/* footer */
+#footer {
+	width: 100%;
+	height: 100px;
+	bottom: 0;
+	background-color: #1d1e22;
+	margin-top: 10%;
+	text-align: center;
+}
+
+#footer p {
+	font-family: montserrat l;
+	color: white;
+
+	margin-top: -15px;
+}
+
+/* animations */
+@keyframes RtoL { /* for pay button */
+	from {margin-right: -50px;}
+	to {margin-right: 0;}
+}
+
+@keyframes BtoT { /* for table */
+	from {margin-top: 20px; opacity: 0;}
+	to {margin-top: -50px; opacity: 1;}
+}
+
+@keyframes th { /* for thumbnails */
+	from {margin-bottom: -50px; opacity: 0;}
+	to {margin-bottom: 0; opacity: 1;}
+}
+@keyframes fade {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}

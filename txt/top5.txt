@@ -1,0 +1,5 @@
+../img/top/1,Knives Out,Mystery/Comedy,2019,2h 10m,★ ★ ★ ★ ☆,PG-13
+../img/top/2,Kimi no Nawa,Animation/Romance,2016,1h 52m,★ ★ ★ ★ ☆,PG
+../img/top/3,Peninsula,Action/Horror,2020,1h 44m,★ ★ ★ ☆ ☆,PG
+../img/top/4,Bad Genius,Thriller/Heist,2017,2h 10m,★ ★ ★ ★ ☆,PG
+../img/top/5,Enola Holmes,Crime/Adventure,2020,2h 1m,★ ★ ★ ★ ☆,PG-13
